@@ -1,2 +1,5 @@
 Model used in the simulation
 
+
+> HiddenValley:ffbar2Zv = on
+
