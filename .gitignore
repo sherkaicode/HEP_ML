@@ -14,4 +14,21 @@ Non-Resonant AD Extrapolation Repo/Root Files/
 Non-Resonant AD Extrapolation Repo/signal_events/
 Non-Resonant AD Extrapolation Repo/working_dir/check_samples/helpers/
 Non-Resonant AD Extrapolation Repo/working_dir/check_samples/semivisible_jet/
-Non-Res_repo_v2/
+
+Non-Res_repo_v2/non-resonant-AD-extrapolation/
+Non-Res_repo_v2/working_dir/qcd_data_samples
+Non-Res_repo_v2/working_dir/qcd_mc_samples
+Non-Res_repo_v2/working_dir/sig_samples
+Non-Res_repo_v2/working_dir/qcd_test_samples
+Non-Res_repo_v2/working_dir/testing_samples
+Non-Res_repo_v2/working_dir/data/fullsup_SR.npz
+Non-Res_repo_v2/working_dir/data/ideal_bkg_events.npz
+Non-Res_repo_v2/working_dir/data/mc_events.npz
+Non-Res_repo_v2/working_dir/data/seed1/data_0.004.npz
+Non-Res_repo_v2/working_dir/data/seed1/data_0.009.npz
+Non-Res_repo_v2/working_dir/data/seed1/data_0.013.npz
+Non-Res_repo_v2/working_dir/data/seed1/data_0.018.npz
+Non-Res_repo_v2/working_dir/data/seed1/data_0.022.npz
+Non-Res_repo_v2/working_dir/data/seed1/data_0.027.npz
+Non-Res_repo_v2/working_dir/data/seed1/data_0.npz
+
