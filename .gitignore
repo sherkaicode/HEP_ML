@@ -32,3 +32,9 @@ Non-Res_repo_v2/working_dir/data/seed1/data_0.022.npz
 Non-Res_repo_v2/working_dir/data/seed1/data_0.027.npz
 Non-Res_repo_v2/working_dir/data/seed1/data_0.npz
 
+My_version/working_dir/data/seed1/
+My_version/working_dir/data/mc_events.npz
+My_version/working_dir/samples/qcd_mc_samples
+My_version/working_dir/samples/sig_samples
+My_version/working_dir/samples/qcd_test_samples
+My_version/working_dir/samples/qcd_data_samples
