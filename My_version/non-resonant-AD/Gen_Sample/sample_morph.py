@@ -54,8 +54,9 @@ def main():
         #Load Data for evaluation
         data_events = np.load(f"{data_path}/data_{p}.npz")
         data_events_cr = data_events["data_events_cr"]
+        data_events_sr = data_events["data_events_sr"]
         data_feature_cr_test = data_events_cr[-n_withold:,n_context:]
-        
+        data_feature_sr_test = data_events_sr[-n_withold:,n_context:]
         #Load Model
         if os.path.isfile(f"{model_path}/morph_top_{p}.pt"):
             # Load the trained model
@@ -80,7 +81,7 @@ def main():
         pred_bkg_SR, _ = transport_flow.flow._transform.inverse(mc_feature_sr, mc_context_sr)
         pred_bkg_SR = pred_bkg_SR.detach().cpu().numpy()
     
-        np.savez(f"{samples_path}/morph_SR_samples_{p}.npz", samples = pred_bkg_SR)
+        np.savez(f"{samples_path}/morph_SR_samples_{p}.npz", data_sr=data_feature_sr_test, samples = pred_bkg_SR)
         
     print("Done Generating Samples")
     

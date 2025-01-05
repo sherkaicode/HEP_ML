@@ -52,8 +52,10 @@ def main():
         #Load Data
         data_events = np.load(f"{data_path}/data_{p}.npz")
         data_events_cr = data_events["data_events_cr"]
+        data_events_sr = data_events["data_events_sr"]
         
         data_cr_test = data_events_cr[-n_withold:]
+        data_sr_test = data_events_sr[-n_withold:]
         mc_cr_test = mc_events_cr[-n_withold:]
         
         #Load Model
@@ -71,7 +73,7 @@ def main():
         # SR Samples weights
         w_sr = NN_reweight.evaluation(mc_events_sr)
         w_sr = (w_sr/(1.-w_sr)).flatten()
-        np.savez(f"{samples_path}/reweight_SR_samples_{p}.npz", mc_samples=mc_events_sr, w_sr=np.nan_to_num(w_sr, copy=False, nan=0.0, posinf=0.0, neginf=0.0))
+        np.savez(f"{samples_path}/reweight_SR_samples_{p}.npz", data_sr=data_sr_test, mc_samples=mc_events_sr, w_sr=np.nan_to_num(w_sr, copy=False, nan=0.0, posinf=0.0, neginf=0.0))
         
         print("Generated Samples for s/b =", p)
 

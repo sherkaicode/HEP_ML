@@ -48,8 +48,10 @@ def main():
         #Load Context for generate
         data_events = np.load(f"{data_path}/data_{p}.npz")
         data_events_cr = data_events["data_events_cr"]
+        data_events_sr = data_events["data_events_sr"]
         data_context_cr_test = data_events_cr[-n_withold:,:n_context]
         data_feature_cr_test = data_events_cr[-n_withold:,n_context:]
+        data_feature_sr_test = data_events_sr[-n_withold:,n_context:]
         mc_context_sr = mc_events_sr[:,:n_context]
         
         #Load Model
@@ -65,7 +67,7 @@ def main():
         
         # SR Background Predictions
         pred_bkg_SR = MAF.sample(args.oversample, mc_context_sr)
-        np.savez(f"{samples_path}/generate_SR_samples_{p}.npz", samples = pred_bkg_SR)
+        np.savez(f"{samples_path}/generate_SR_samples_{p}.npz", data_sr=data_feature_sr_test,samples = pred_bkg_SR)
         
     
 if __name__ == "__main__":
